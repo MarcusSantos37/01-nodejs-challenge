@@ -38,5 +38,6 @@ O servidor estará acessível em `http://localhost:3333` por padrão.
 - **PATCH /tasks/:id/complete:** Marca uma tarefa como completa ou incompleta.
 - **DELETE /tasks/:id:** Exclui uma tarefa existente com base em seu ID.
 
-Licença
+## Licença
+
 Este projeto é licenciado sob a licença MIT.
