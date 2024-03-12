@@ -52,12 +52,6 @@ export class Database {
     }
   }
 
-  findById(table, id) {
-    const data = this.#database[table] ?? [];
-    const foundRow = data.find((row) => row.id === id);
-    return foundRow !== undefined ? foundRow : null;
-  }
-
   delete(table, id) {
     const rowIndex = this.#database[table].findIndex((row) => row.id === id);
 

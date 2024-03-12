@@ -64,7 +64,7 @@ export const routes = [
 
       const { title, description } = req.body;
 
-      const task = database.findById("tasks", id);
+      const [task] = database.select("tasks", { id });
 
       if (!task) {
         return res.writeHead(404).end(
@@ -102,7 +102,7 @@ export const routes = [
     handler: (req, res) => {
       const { id } = req.params;
 
-      const task = database.findById("tasks", id);
+      const [task] = database.select("tasks", { id });
 
       if (!task) {
         return res.writeHead(404).end(
@@ -123,7 +123,7 @@ export const routes = [
     handler: (req, res) => {
       const { id } = req.params;
 
-      const task = database.findById("tasks", id);
+      const [task] = database.select("tasks", { id });
 
       if (!task) {
         return res.writeHead(404).end(
